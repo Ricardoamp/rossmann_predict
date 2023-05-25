@@ -258,7 +258,7 @@ Linear Regression	| 2081.73 +/- 295.63 |	0.3 +/- 0.02	| 2952.52 +/- 468.37
 Linear Regression Lasso |	2116.38 +/- 341.5 |	0.29 +/- 0.01 |	3057.75 +/- 504.26
 XGBoost Regressor |	7047.98 +/- 587.65	| 0.95 +/- 0.0 |	7714.03 +/- 688.72
 
-**Random Forest Regressor teve o melhor desempenho**
+**Random Forest Regressor teve o melhor desempenho.**
 
 ### 8.2 Ajuste de hiperparâmetros 
 
@@ -269,4 +269,9 @@ param_tuned = {'n_estimators': 100, 'max_depth': 3, 'min_samples_split': 2, 'min
 ![](./img/prediction.png)
  
 ## 9.0. Modelo em produção
-Na etapa de colocar o modelo em produção, foi desenvolvido um dashboard utilizando a plataforma Streamlit. No entanto, uma implementação adicional que traria benefícios para o CFO seria disponibilizar as informações através de um bot no Telegram, proporcionando uma forma mais conveniente e acessível de acessar os dados de previsão de vendas.
+Exemplo de previsões de vendas feitas das lojas para os próximos 6 meses:
+
+## 10.0 Melhorias futuras
+**1.** Desenvolver um dashboard utilizando a plataforma Streamlit ou alguma outra plataforma(como power bi, por exemplo).
+
+**2.** Bot no Telegram, proporcionando uma forma mais conveniente e acessível de acessar os dados de previsão de vendas.

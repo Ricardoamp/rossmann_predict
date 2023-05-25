@@ -130,71 +130,72 @@ Durante a exploração dos dados, é fundamental extrair insights relevantes que
 
 FALSA Lojas com MAIOR SORTIMENTO vendem MENOS.
 
+![](./img/h1.png)
+
 
 
 **H2**. Lojas com competidores mais próximos deveriam vender menos.
 
 FALSA Lojas com COMPETIDORES MAIS PROXIMOS vendem MAIS.
 
-
+![](./img/h2.png)
 
 **H3**. Lojas com competidores à mais tempo deveriam vendem mais.
 
 FALSa Lojas com COMPETIDORES À MAIS TEMPO vendem MENOS.
 
+![](./img/h3.png)
 
 **H4**. Lojas com promoções ativas por mais tempo deveriam vender mais.
 
 FALSA Lojas com promocoes ativas por mais tempo vendem menos, depois de um certo periodo de promocao
 
+![](./img/h4.png)
 
 **H5**. Lojas com mais promoções consecutivas deveriam vender mais.
 
 FALSA Lojas com mais promocoes consecutivas vendem menos
 
-
+![](./img/h5.png)
 
 **H6**. Lojas abertas durante o feriado de Natal deveriam vender mais.
 
 FALSA Lojas abertas durante o feriado do Natal vendem menos.
 
+![](./img/h6.png)
 
 **H7**. Lojas deveriam vender mais ao longo dos anos.
 
 FALSA Lojas vendem menos ao longo dos anos
 
+![](./img/h7.png)
 
 **H8**. Lojas deveriam vender mais no segundo semestre do ano.
 
 FALSA Lojas vendem menos no segundo semestre do ano
 
+![](./img/h8.png)
 
 **H9**. Lojas deveriam vender mais depois do dia 10 de cada mês.
 
 VERDADEIRA Lojas vendem mais depois do dia 10 de cada mes.
 
+![](./img/h9.png)
 
 **H10**. Lojas deveriam vender menos aos finais de semana.
 
 VERDADEIRA Lojas vendem menos nos final de semana
 
+![](./img/h10.png)
+
 **H11**. Lojas deveriam vender menos durante os feriados escolares.
 
 VERDADEIRA Lojas vendem menos durante os feriadso escolares, except os meses de Julho e Agosto.
 
- 
+ ![](./img/h11.png)
  
 ## 6.0. Modelagem dos dados
-Na etapa de modelagem dos dados, o objetivo é preparar os dados de forma adequada para que os algoritmos de machine learning possam ser aplicados. Essa etapa envolve uma série de processos, como codificação de variáveis categóricas em variáveis numéricas, transformações de dados e separação dos dados em conjuntos de treinamento e teste. Aqui estão algumas das principais etapas envolvidas na modelagem dos dados:
-
-### 6.1. Codificação de variáveis categóricas 
-Os algoritmos de machine learning geralmente trabalham melhor com variáveis numéricas. Portanto, é necessário codificar as variáveis categóricas em valores numéricos. Isso pode ser feito usando técnicas como codificação one-hot (dummy encoding), onde cada categoria se torna uma nova variável binária, ou a codificação de rótulos (label encoding), onde cada categoria é atribuída a um número inteiro.
-
-### 6.2 Transformações de variáveis 
-Em alguns casos, pode ser necessário aplicar transformações em variáveis para tornar sua distribuição mais adequada para os algoritmos de machine learning. Por exemplo, aplicar logaritmo em variáveis com distribuição assimétrica ou utilizar transformações polinomiais para capturar relações não lineares.
-
-### 6.3 Separação de dados de treinamento e teste 
-É necessário dividir os dados em conjuntos separados para treinamento e teste. O conjunto de treinamento é utilizado para treinar os algoritmos de machine learning, enquanto o conjunto de teste é usado para avaliar o desempenho do modelo.
+Na etapa de modelagem dos dados, o objetivo é preparar os dados de forma adequada para que os algoritmos de machine learning possam ser aplicados. Essa etapa envolve uma série de processos, como codificação de variáveis categóricas em variáveis numéricas, transformações de dados e separação dos dados em conjuntos de treinamento e teste.
  
 ## 7.0. Algoritmos de Machine Learning
 Na etapa de implementação de algoritmos de machine learning, o objetivo é selecionar e aplicar diferentes algoritmos para resolver o problema de previsão de vendas e determinar qual deles apresenta o melhor desempenho para o caso em questão.

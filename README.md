@@ -98,11 +98,90 @@ Utilizando gráficos e visualizações, é possível explorar as relações entr
 ### 5.3. Correlação entre variáveis
 É importante analisar a correlação entre as variáveis para identificar possíveis relações e dependências. A matriz de correlação ou gráficos de dispersão podem ajudar a entender se as variáveis estão positivamente, negativamente ou não correlacionadas entre si.
 
+ <h1 align="center"> Correlação - Variável Numérica </h1>
+
+![](./img/atributos_numericos.png)
+
+ <h1 align="center"> Correlação - Variável Categórica </h1>
+
+![](./img/atributos_categoricos.png)
+
 ### 5.4. Criação de hipóteses
 Com base na análise dos dados, é possível criar hipóteses sobre os fatores que influenciam o comportamento dos dados. Essas hipóteses podem ser testadas posteriormente ou fornecer insights para direcionar a modelagem e as estratégias de previsão.
 
+![](./img/hipoteses.png)
+
+**H1**. Lojas com maior sortimentos deveriam vender mais.
+**H2**. Lojas com competidores mais próximos deveriam vender menos.
+**H3**. Lojas com competidores à mais tempo deveriam vendem mais.
+**H4**. Lojas com promoções ativas por mais tempo deveriam vender mais.
+**H5**. Lojas com mais promoções consecutivas deveriam vender mais.
+**H6**. Lojas abertas durante o feriado de Natal deveriam vender mais.
+**H7**. Lojas deveriam vender mais ao longo dos anos.
+**H8**. Lojas deveriam vender mais no segundo semestre do ano.
+**H9**. Lojas deveriam vender mais depois do dia 10 de cada mês.
+**H10**. Lojas deveriam vender menos aos finais de semana.
+**H11**. Lojas deveriam vender menos durante os feriados escolares.
+
 ### 5.5 Extração de insights 
 Durante a exploração dos dados, é fundamental extrair insights relevantes que possam ser aplicados ao negócio. Isso envolve identificar padrões interessantes, relações inesperadas ou oportunidades de melhoria.
+
+**H1**. Lojas com maior sortimentos deveriam vender mais.
+
+FALSA Lojas com MAIOR SORTIMENTO vendem MENOS.
+
+
+
+**H2**. Lojas com competidores mais próximos deveriam vender menos.
+
+FALSA Lojas com COMPETIDORES MAIS PROXIMOS vendem MAIS.
+
+
+
+**H3**. Lojas com competidores à mais tempo deveriam vendem mais.
+
+FALSa Lojas com COMPETIDORES À MAIS TEMPO vendem MENOS.
+
+
+**H4**. Lojas com promoções ativas por mais tempo deveriam vender mais.
+
+FALSA Lojas com promocoes ativas por mais tempo vendem menos, depois de um certo periodo de promocao
+
+
+**H5**. Lojas com mais promoções consecutivas deveriam vender mais.
+
+FALSA Lojas com mais promocoes consecutivas vendem menos
+
+
+
+**H6**. Lojas abertas durante o feriado de Natal deveriam vender mais.
+
+FALSA Lojas abertas durante o feriado do Natal vendem menos.
+
+
+**H7**. Lojas deveriam vender mais ao longo dos anos.
+
+FALSA Lojas vendem menos ao longo dos anos
+
+
+**H8**. Lojas deveriam vender mais no segundo semestre do ano.
+
+FALSA Lojas vendem menos no segundo semestre do ano
+
+
+**H9**. Lojas deveriam vender mais depois do dia 10 de cada mês.
+
+VERDADEIRA Lojas vendem mais depois do dia 10 de cada mes.
+
+
+**H10**. Lojas deveriam vender menos aos finais de semana.
+
+VERDADEIRA Lojas vendem menos nos final de semana
+
+**H11**. Lojas deveriam vender menos durante os feriados escolares.
+
+VERDADEIRA Lojas vendem menos durante os feriadso escolares, except os meses de Julho e Agosto.
+
  
  
 ## 6.0. Modelagem dos dados

@@ -199,13 +199,72 @@ Na etapa de modelagem dos dados, o objetivo é preparar os dados de forma adequa
  
 ## 7.0. Algoritmos de Machine Learning
 Na etapa de implementação de algoritmos de machine learning, o objetivo é selecionar e aplicar diferentes algoritmos para resolver o problema de previsão de vendas e determinar qual deles apresenta o melhor desempenho para o caso em questão.
+
+Para isso, foi selecionado 5 métodos para podermos comparar qual possui mais eficiência para esse projeto:
+
+**Average Model**
+
+O Average Model é uma abordagem simples de média usada para previsões. Nesse modelo, várias previsões são geradas usando diferentes métodos ou algoritmos, e em seguida, as previsões são combinadas tirando a média dos resultados. Essa abordagem visa reduzir a variância e melhorar a estabilidade das previsões.
+
+**Random Forest Regressor**
+
+O Random Forest Regressor é um algoritmo de aprendizado de máquina baseado em árvores de decisão. Ele cria uma coleção de árvores de decisão aleatórias e combina suas previsões para obter uma previsão final. É eficaz para problemas de regressão, como prever vendas, pois pode lidar com uma variedade de variáveis e capturar relações não lineares.
+
+**Linear Regression**
+
+A regressão linear é um algoritmo de aprendizado de máquina que estabelece uma relação linear entre uma variável dependente e uma ou mais variáveis independentes. Nesse caso, é usado para prever as vendas com base em diferentes recursos ou variáveis independentes. O modelo de regressão linear assume uma relação linear entre as variáveis, o que pode ser útil quando existe uma relação linear clara entre as vendas e os atributos considerados.
+
+**Linear Regression - Lasso**
+
+A regressão linear Lasso (Least Absolute Shrinkage and Selection Operator) é uma técnica de regressão linear que adiciona uma penalidade de regularização à função de perda, ajudando a reduzir a complexidade do modelo e evitar o overfitting. O Lasso é útil quando há muitos atributos e alguns deles podem não ser relevantes para a previsão das vendas. Ele tende a selecionar automaticamente os atributos mais importantes, atribuindo um peso zero aos menos relevantes.
+
+**XGBoost Regressor**
+
+O XGBoost Regressor é um algoritmo de aprendizado de máquina baseado em árvores de decisão, que utiliza um conjunto de árvores de decisão impulsionadas sequencialmente. Ele é projetado para otimizar a função de perda através de uma combinação de algoritmos de boosting e é conhecido por sua eficácia em problemas de regressão. O XGBoost Regressor pode lidar com dados de alta dimensionalidade e é amplamente utilizado em competições de ciência de dados, devido à sua precisão e desempenho geralmente superior.
  
  ## 8.0. Avaliação do Algoritmo
-Após treinar cada modelo, é necessário avaliar seu desempenho com o subconjunto de validação. Métricas apropriadas para avaliação de modelos de previsão podem incluir erro médio absoluto (MAE), erro médio quadrático (MSE), coeficiente de determinação (R²) e outros. Com base nas métricas de desempenho, é possível comparar e identificar qual algoritmo apresenta os melhores resultados.
+Após treinar cada modelo, é necessário avaliar seu desempenho com o subconjunto de validação. Métricas apropriadas para avaliação de modelos de previsão podem incluir erro médio absoluto (MAE), erro médio percentual absoluto (MAPE), erro médio quadrático (RMSE) e outros. Com base nas métricas de desempenho, é possível comparar e identificar qual algoritmo apresenta os melhores resultados.
 
-Ajuste de hiperparâmetros: É possível que cada algoritmo possua hiperparâmetros que afetam seu desempenho. Por meio de técnicas como pesquisa em grade (grid search) ou otimização bayesiana, é possível ajustar esses hiperparâmetros e realizar testes adicionais para encontrar a combinação ideal que maximize o desempenho do modelo.
+### 8.1. Métricas De Desempenho
 
-Seleção do melhor modelo: Ao finalizar a implementação dos algoritmos e avaliar seu desempenho, é possível selecionar o modelo que apresenta o melhor desempenho de acordo com as métricas escolhidas. Esse modelo será utilizado para fazer as previsões de vendas futuras com base nos dados disponíveis.
+**MAE (Mean Absolute Error) - Erro Médio Absoluto:**
+
+O MAE é uma métrica de avaliação comum usada para medir a diferença média absoluta entre as previsões e os valores reais. Ele calcula a média das diferenças absolutas entre as previsões e os valores verdadeiros, ignorando a direção do erro. Quanto menor o valor do MAE, melhor é o desempenho do modelo, indicando que as previsões estão mais próximas dos valores reais.
+
+**MAPE (Mean Absolute Percentage Error) - Erro Médio Percentual Absoluto:**
+
+O MAPE é uma métrica de avaliação que mede o erro percentual médio entre as previsões e os valores reais. Ele calcula a média das diferenças percentuais absolutas entre as previsões e os valores verdadeiros. O MAPE é útil quando se deseja avaliar o desempenho do modelo em termos de porcentagem de erro. No entanto, ele pode ser sensível a valores próximos a zero, onde uma pequena diferença percentual pode levar a um valor de erro muito alto.
+
+**RMSE (Root Mean Square Error) - Erro Médio Quadrático:**
+
+O RMSE é uma métrica de avaliação comumente utilizada para medir a diferença quadrática média entre as previsões e os valores reais. Ele calcula a raiz quadrada da média dos erros quadráticos, fornecendo uma medida de erro que está na mesma escala das variáveis originais. O RMSE é uma métrica popular porque penaliza mais os erros maiores, tornando-se sensível a outliers. Quanto menor o valor do RMSE, melhor é o desempenho do modelo, indicando que as previsões estão mais próximas dos valores reais.
+
+**Sem Cross validation**
+
+Model Name	| MAE	| MAPE |	RMSE
+---------- | --- | ---- | ----
+Random Forest Regressor |	679.080548	| 0.099879	| 1010.101738
+Average Model	| 1354.800353 |	0.455051 |	1835.135542
+Linear Regression	| 1867.089774	| 0.292694	| 2671.049215
+Linear Regression Lasso |	1891.704881 |	0.289106 |	2744.451737
+XGBoost Regressor |	6683.667628	| 0.949516 |	7330.817866
+
+**Sem Cross validation**
+
+Model Name	| MAE	| MAPE |	RMSE
+---------- | --- | ---- | ----
+Random Forest Regressor |	837.7 +/- 219.24 |	0.12 +/- 0.02	| 1256.59 +/- 320.28
+Linear Regression	| 2081.73 +/- 295.63 |	0.3 +/- 0.02	| 2952.52 +/- 468.37
+Linear Regression Lasso |	2116.38 +/- 341.5 |	0.29 +/- 0.01 |	3057.75 +/- 504.26
+XGBoost Regressor |	7047.98 +/- 587.65	| 0.95 +/- 0.0 |	7714.03 +/- 688.72
+
+**Random Forest Regressor teve o melhor desempenho**
+
+### 8.2 Ajuste de hiperparâmetros 
+
+É possível que cada algoritmo possua hiperparâmetros que afetam seu desempenho. Por meio de técnicas como pesquisa em grade (grid search) ou otimização bayesiana, é possível ajustar esses hiperparâmetros e realizar testes adicionais para encontrar a combinação ideal que maximize o desempenho do modelo. Para o caso da Random Forest Regressor desse projeto os melhores parâmetros foram:
+
+param_tuned = {'n_estimators': 100, 'max_depth': 3, 'min_samples_split': 2, 'min_samples_leaf': 4, 'random_state': 100}
  
 ## 9.0. Modelo em produção
 Na etapa de colocar o modelo em produção, foi desenvolvido um dashboard utilizando a plataforma Streamlit. No entanto, uma implementação adicional que traria benefícios para o CFO seria disponibilizar as informações através de um bot no Telegram, proporcionando uma forma mais conveniente e acessível de acessar os dados de previsão de vendas.

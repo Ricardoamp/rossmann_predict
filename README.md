@@ -87,6 +87,8 @@ is_promo |	0.0 |	1.0 |	1.0 |	0.155231 |	0.0 |	0.362124 |	1.904152 |	1.625796
 ### 5.2. Visualização dos dados 
 Utilizando gráficos e visualizações, é possível explorar as relações entre as variáveis e identificar tendências ou padrões. Histogramas, gráficos de dispersão, gráficos de linhas e box plots são algumas das ferramentas comumente utilizadas para essa análise visual.
 
+![Getting Started](./img/variavel_numerica.png)
+
 ### 5.3. Correlação entre variáveis
 É importante analisar a correlação entre as variáveis para identificar possíveis relações e dependências. A matriz de correlação ou gráficos de dispersão podem ajudar a entender se as variáveis estão positivamente, negativamente ou não correlacionadas entre si.
 

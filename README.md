@@ -7,10 +7,10 @@ Para realizar essa previsão, o projeto utiliza algoritmos de machine learning, 
 Além disso, o projeto segue o método de gerenciamento CRISP, que é uma abordagem amplamente utilizada em projetos de mineração de dados e análise preditiva. O CRISP consiste em uma série de fases iterativas, incluindo compreensão do negócio, compreensão dos dados, preparação dos dados, modelagem, avaliação e implantação. Ao seguir o CRISP, o projeto busca garantir uma abordagem estruturada e sistemática, permitindo a criação de um modelo de previsão de vendas mais preciso e confiável.
  
 ## 1.0. Questão de negócio
-Contexto fictício: Os gerentes das lojas expressaram o interesse em realizar uma previsão de vendas para as próximas 6 semanas. Essa previsão é importante para auxiliá-los no planejamento estratégico, tomada de decisões e alocação de recursos adequados em cada uma das lojas.
+A Rossmann opera mais de 3.000 drogarias em 7 países europeus. Atualmente, os gerentes das lojas da Rossmann têm a tarefa de prever suas vendas diárias com antecedência de até seis semanas. As vendas das lojas são influenciadas por diversos fatores, incluindo promoções, concorrência, feriados escolares e estaduais, sazonalidade e localização. Com milhares de gerentes individuais prevendo vendas com base em suas circunstâncias únicas, a precisão dos resultados pode variar bastante.
  
 ## 2.0. Entendimento do Negócio
-O CFO (Chief Financial Officer) tem interesse em alocar recursos de forma mais eficiente para as lojas da empresa. Para auxiliar nesse processo de alocação, ele busca realizar uma previsão de vendas das lojas para as próximas 6 semanas.
+Contexto fictício: O CFO (Chief Financial Officer) tem interesse em alocar recursos de forma mais eficiente para as lojas da empresa. Para auxiliar nesse processo de alocação, ele busca realizar uma previsão de vendas das lojas para as próximas 6 semanas.
 
 A previsão de vendas é uma ferramenta valiosa que permite ao CFO ter uma visão antecipada do desempenho esperado de cada loja no curto prazo. Com base nessas previsões, o CFO pode tomar decisões informadas sobre a alocação de recursos financeiros, como investimentos em estoque, contratação de pessoal adicional ou ajuste de despesas.
  

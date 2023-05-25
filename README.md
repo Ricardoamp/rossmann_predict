@@ -1,4 +1,4 @@
-![Getting Started](./img/rossmann.png)
+![Rossman](./img/rossmann.png)
  
  <h1 align="center"> PREVISÃO DE VENDAS - LOJAS ROSSMANN </h1>
   
@@ -8,7 +8,7 @@ Para realizar essa previsão, o projeto utiliza algoritmos de machine learning, 
 
 Além disso, o projeto segue o método de gerenciamento CRISP, que é uma abordagem amplamente utilizada em projetos de mineração de dados e análise preditiva. O CRISP consiste em uma série de fases iterativas, incluindo compreensão do negócio, compreensão dos dados, preparação dos dados, modelagem, avaliação e implantação. Ao seguir o CRISP, o projeto busca garantir uma abordagem estruturada e sistemática, permitindo a criação de um modelo de previsão de vendas mais preciso e confiável.
  
- ![Getting Started](./img/crisp.png)
+ ![Crisp](./img/crisp.png)
  
 ## 1.0. Questão de negócio
 A Rossmann opera mais de 3.000 drogarias em 7 países europeus. Atualmente, os gerentes das lojas da Rossmann têm a tarefa de prever suas vendas diárias com antecedência de até seis semanas. As vendas das lojas são influenciadas por diversos fatores, incluindo promoções, concorrência, feriados escolares e estaduais, sazonalidade e localização. Com milhares de gerentes individuais prevendo vendas com base em suas circunstâncias únicas, a precisão dos resultados pode variar bastante.
@@ -86,8 +86,14 @@ is_promo |	0.0 |	1.0 |	1.0 |	0.155231 |	0.0 |	0.362124 |	1.904152 |	1.625796
 
 ### 5.2. Visualização dos dados 
 Utilizando gráficos e visualizações, é possível explorar as relações entre as variáveis e identificar tendências ou padrões. Histogramas, gráficos de dispersão, gráficos de linhas e box plots são algumas das ferramentas comumente utilizadas para essa análise visual.
+ 
+ <h1 align="center"> Variável numérica </h1>
+ 
+![](./img/variavel_numerica.png)
 
-![Getting Started](./img/variavel_numerica.png)
+ <h1 align="center"> Variável Categórica </h1>
+ 
+![](./img/variavel_categorica.png)
 
 ### 5.3. Correlação entre variáveis
 É importante analisar a correlação entre as variáveis para identificar possíveis relações e dependências. A matriz de correlação ou gráficos de dispersão podem ajudar a entender se as variáveis estão positivamente, negativamente ou não correlacionadas entre si.

@@ -265,6 +265,8 @@ XGBoost Regressor |	7047.98 +/- 587.65	| 0.95 +/- 0.0 |	7714.03 +/- 688.72
 É possível que cada algoritmo possua hiperparâmetros que afetam seu desempenho. Por meio de técnicas como pesquisa em grade (grid search) ou otimização bayesiana, é possível ajustar esses hiperparâmetros e realizar testes adicionais para encontrar a combinação ideal que maximize o desempenho do modelo. Para o caso da Random Forest Regressor desse projeto os melhores parâmetros foram:
 
 param_tuned = {'n_estimators': 100, 'max_depth': 3, 'min_samples_split': 2, 'min_samples_leaf': 4, 'random_state': 100}
+
+![](./img/prediction.png)
  
 ## 9.0. Modelo em produção
 Na etapa de colocar o modelo em produção, foi desenvolvido um dashboard utilizando a plataforma Streamlit. No entanto, uma implementação adicional que traria benefícios para o CFO seria disponibilizar as informações através de um bot no Telegram, proporcionando uma forma mais conveniente e acessível de acessar os dados de previsão de vendas.

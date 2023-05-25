@@ -8,6 +8,8 @@ Para realizar essa previsão, o projeto utiliza algoritmos de machine learning, 
 
 Além disso, o projeto segue o método de gerenciamento CRISP, que é uma abordagem amplamente utilizada em projetos de mineração de dados e análise preditiva. O CRISP consiste em uma série de fases iterativas, incluindo compreensão do negócio, compreensão dos dados, preparação dos dados, modelagem, avaliação e implantação. Ao seguir o CRISP, o projeto busca garantir uma abordagem estruturada e sistemática, permitindo a criação de um modelo de previsão de vendas mais preciso e confiável.
  
+ ![Getting Started](./img/crisp.png)
+ 
 ## 1.0. Questão de negócio
 A Rossmann opera mais de 3.000 drogarias em 7 países europeus. Atualmente, os gerentes das lojas da Rossmann têm a tarefa de prever suas vendas diárias com antecedência de até seis semanas. As vendas das lojas são influenciadas por diversos fatores, incluindo promoções, concorrência, feriados escolares e estaduais, sazonalidade e localização. Com milhares de gerentes individuais prevendo vendas com base em suas circunstâncias únicas, a precisão dos resultados pode variar bastante.
  
@@ -21,27 +23,66 @@ Para esse projeto será utilizado Aprendizado de Máquina Supervisionada de Regr
 ## 3.0. Coleta de dados
 Na etapa de coleta de dados para esse caso específico, é comum utilizar diferentes métodos, dependendo da fonte dos dados e da disponibilidade de acesso. Para esse caso foi realizado o download dos conjuntos de dados no formato csv por meio da plataforma kaggle.
 
-No entanto, em outros casos, quando os dados não estão disponíveis no Kaggle ou em arquivos prontos para download, pode ser necessário utilizar outras abordagens. Algumas dessas abordagens podem incluir:
+[Kaggle dados Rossmann](https://www.kaggle.com/competitions/rossmann-store-sales)
 
-Consultas SQL: Se os dados estiverem armazenados em um banco de dados, pode ser necessário escrever consultas SQL para extrair as informações relevantes. Isso pode ser feito usando uma linguagem de consulta, como o SQL, para recuperar os dados necessários das tabelas ou bancos de dados específicos.
+Dados | descrição
+------- | ---------
+train.csv | dados históricos, incluindo as vendas
+test.csv | dados históricos, excluindo as vendas
+sample_submission.csv | um arquivo de exemplo de submissão no formato correto
+store.csv | informações adicionais sobre as lojas
 
-Requisições de API: Se os dados estiverem disponíveis por meio de uma API (Interface de Programação de Aplicativos), será necessário fazer solicitações HTTP para acessar os dados desejados. Isso geralmente envolve o uso de bibliotecas ou frameworks de programação para fazer as solicitações e processar as respostas recebidas.
 
-Scraping da web: Em algumas situações, pode ser necessário realizar a extração de dados diretamente de sites por meio de técnicas de web scraping. Isso envolve o uso de bibliotecas ou frameworks que permitem analisar o código HTML das páginas web e extrair os dados relevantes.
+Campos de dados
+A maioria dos campos é autoexplicativa. A seguir, estão as descrições para aqueles que não são:
 
-É importante adaptar a abordagem de coleta de dados com base na fonte e no formato dos dados desejados. Cada caso pode ter requisitos específicos, e a escolha do método adequado depende da disponibilidade e acessibilidade dos dados necessários.
+Colunas | descrição
+------- | ---------
+Id | um ID que representa um par (Loja, Data) no conjunto de testes
+Store | um ID único para cada loja
+Sales | a receita para um determinado dia (isso é o que você está prevendo)
+Customers | o número de clientes em um determinado dia
+Open | um indicador se a loja estava aberta: 0 = fechada, 1 = aberta
+StateHoliday | indica um feriado estadual. Normalmente, todas as lojas, com poucas exceções, estão fechadas em feriados estaduais. Observe que todas as escolas estão fechadas em feriados públicos e fins de semana. a = feriado público, b = feriado de Páscoa, c = Natal, 0 = Nenhum
+SchoolHoliday | indica se (Loja, Data) foi afetada pelo fechamento de escolas públicas
+StoreType | diferencia entre 4 modelos diferentes de loja: a, b, c, d
+Assortment | descreve o nível de variedade: a = básico, b = extra, c = estendido
+CompetitionDistance | distância em metros até a loja concorrente mais próxima
+CompetitionOpenSince[Month/Year] | fornece o ano e mês aproximados da abertura da loja concorrente mais próxima
+Promo | indica se a loja está executando uma promoção naquele dia
+Promo2 | Promo2 é uma promoção contínua e consecutiva para algumas lojas: 0 = loja não está participando, 1 = loja está participando
+Promo2Since[Year/Week] | descreve o ano e semana do calendário em que a loja começou a participar da Promo2
+PromoInterval | descreve os intervalos consecutivos em que a Promo2 é iniciada, nomeando os meses em que a promoção é iniciada novamente. Por exemplo, "Fev, Mai, Ago, Nov" significa que cada rodada começa em fevereiro, maio, agosto e novembro de qualquer ano para aquela loja.
  
 ## 4.0. Limpeza dos dados
 Durante a etapa de limpeza dos dados, foi realizado um tratamentos para lidar com valores vazios ou ausentes. A substituição desses valores vazios é uma prática importante para garantir a qualidade e consistência dos dados utilizados no projeto de previsão de vendas.
 
 Existem várias abordagens que podem ser adotadas para tratar os valores vazios, e a escolha depende do contexto dos dados e da natureza do problema em questão. O método usado para substituir valores vazios foram com preenchimento com um valor padrão: Nesse caso, os valores vazios são substituídos por um valor específico ou um valor médio ou mediano dos dados existentes.
- 
- 
+  
 ## 5.0. Exploração dos dados
 Na etapa de exploração dos dados, o objetivo principal é obter um entendimento mais profundo do negócio por meio da análise dos dados disponíveis. Essa etapa envolve identificar padrões, relacionamentos e insights relevantes que possam ajudar a compreender melhor o comportamento dos dados e a tomar decisões embasadas. A seguir, são apresentadas algumas etapas comuns durante a exploração dos dados:
 
 ### 5.1. Análise descritiva 
 Inicia-se com uma análise descritiva das variáveis disponíveis, como a média, mediana, desvio padrão, valores mínimos e máximos. Essa análise fornece uma visão geral do intervalo de valores, identificando possíveis discrepâncias ou anomalias nos dados.
+
+
+attributes |	min |	max	| range	| mean	| median	| std	| skew	| kurtosis
+---------- | --- | --- | ----- | ---- | ------ | --- | ---- | --------
+store	| 1.0 |	1115.0 |	1114.0	| 558.429727 |	558.0 |	321.908493 |	-0.000955 |	-1.200524
+day_of_week	| 1.0	| 7.0	| 6.0	| 3.998341 |	4.0 |	1.997390 |	0.001593 |	-1.246873
+sales	| 0.0 |	41551.0 |	41551.0	| 5773.818972 |	5744.0	| 3849.924283 |	0.641460	| 1.778375
+customers |	0.0	| 7388.0 |	7388.0 |	633.145946 |	609.0 |	464.411506 |	1.598650 |	7.091773
+open |	0.0 |	1.0 |	1.0 |	0.830107 |	1.0 |	0.375539 |	-1.758045 |	1.090723
+promo |	0.0 |	1.0 |	1.0 |	0.381515 |	0.0 |	0.485758 |	0.487838 |	-1.762018
+school_holiday |	0.0 |	1.0 |	1.0 |	0.178647 |	0.0 |	0.383056 |	1.677842	| 0.815154
+competition_distance |	20.0 |	200000.0 |	199980.0 |	5935.442677 |	2330.0	| 12547.646829 |	10.242344 |	147.789712
+competition_open_since_month |	1.0 |	12.0 |	11.0 |	6.786849 |	7.0 |	3.311085 |	-0.042076 |	-1.232607
+competition_open_since_year |	1900.0 |	2015.0 |	115.0 |	2010.324840 |	2012.0 |	5.515591 |	-7.235657 |	124.071304
+promo2 |	0.0 |	1.0 |	1.0 |	0.500564 |	1.0 |	0.500000 |	-0.002255 |	-1.999999
+promo2_since_week |	1.0 |	52.0 |	51.0 |	23.619033 |	22.0 |	14.310057 |	0.178723 |	-1.184046
+promo2_since_year |	2009.0 |	2015.0 |	6.0 |	2012.793297 |	2013.0 |	1.662657 |	-0.784436 |	-0.210075
+is_promo |	0.0 |	1.0 |	1.0 |	0.155231 |	0.0 |	0.362124 |	1.904152 |	1.625796
+
 
 ### 5.2. Visualização dos dados 
 Utilizando gráficos e visualizações, é possível explorar as relações entre as variáveis e identificar tendências ou padrões. Histogramas, gráficos de dispersão, gráficos de linhas e box plots são algumas das ferramentas comumente utilizadas para essa análise visual.

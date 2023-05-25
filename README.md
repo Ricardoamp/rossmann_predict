@@ -1,5 +1,7 @@
- <h1 align="center"> PREVISÃO DE VENDAS - LOJAS ROSSMANN </h1>
+![Getting Started](./img/rossmann.png)
  
+ <h1 align="center"> PREVISÃO DE VENDAS - LOJAS ROSSMANN </h1>
+  
 O projeto mencionado é uma iniciativa da comunidade DS (Data Science) com o objetivo de realizar uma previsão de vendas das lojas Rossmann para os próximos 6 meses. Os dados utilizados para esse fim são obtidos do Kaggle, uma plataforma online que reúne conjuntos de dados de diferentes domínios.
 
 Para realizar essa previsão, o projeto utiliza algoritmos de machine learning, que são métodos computacionais capazes de aprender padrões nos dados e fazer previsões com base neles. Esses algoritmos são treinados com os dados históricos de vendas, buscando identificar relações e tendências que possam ajudar a prever as vendas futuras.
@@ -13,6 +15,8 @@ A Rossmann opera mais de 3.000 drogarias em 7 países europeus. Atualmente, os g
 Contexto fictício: O CFO (Chief Financial Officer) tem interesse em alocar recursos de forma mais eficiente para as lojas da empresa. Para auxiliar nesse processo de alocação, ele busca realizar uma previsão de vendas das lojas para as próximas 6 semanas.
 
 A previsão de vendas é uma ferramenta valiosa que permite ao CFO ter uma visão antecipada do desempenho esperado de cada loja no curto prazo. Com base nessas previsões, o CFO pode tomar decisões informadas sobre a alocação de recursos financeiros, como investimentos em estoque, contratação de pessoal adicional ou ajuste de despesas.
+
+Para esse projeto será utilizado Aprendizado de Máquina Supervisionada de Regressão - Time Series.
  
 ## 3.0. Coleta de dados
 Na etapa de coleta de dados para esse caso específico, é comum utilizar diferentes métodos, dependendo da fonte dos dados e da disponibilidade de acesso. Para esse caso foi realizado o download dos conjuntos de dados no formato csv por meio da plataforma kaggle.

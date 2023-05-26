@@ -2,7 +2,7 @@
  
  <h1 align="center"> PREVISÃO DE VENDAS - LOJAS ROSSMANN </h1>
   
-O projeto mencionado é uma iniciativa da comunidade DS (Data Science) com o objetivo de realizar uma previsão de vendas das lojas Rossmann para os próximos 6 meses. Os dados utilizados para esse fim são obtidos do Kaggle, uma plataforma online que reúne conjuntos de dados de diferentes domínios.
+O projeto mencionado é uma iniciativa da comunidade DS (Data Science) com o objetivo de realizar uma previsão de vendas das lojas Rossmann para os próximos 6 semanas. Os dados utilizados para esse fim são obtidos do Kaggle, uma plataforma online que reúne conjuntos de dados de diferentes domínios.
 
 Para realizar essa previsão, o projeto utiliza algoritmos de machine learning, que são métodos computacionais capazes de aprender padrões nos dados e fazer previsões com base neles. Esses algoritmos são treinados com os dados históricos de vendas, buscando identificar relações e tendências que possam ajudar a prever as vendas futuras.
 
@@ -269,7 +269,7 @@ param_tuned = {'n_estimators': 100, 'max_depth': 3, 'min_samples_split': 2, 'min
 ![](./img/prediction.png)
  
 ## 9.0. Modelo em produção
-Exemplo de previsões de vendas feitas das lojas para os próximos 6 meses:
+Exemplo de previsões de vendas feitas das lojas para as próximas 6 semanas:
 
 ## 10.0 Melhorias futuras
 **1.** Desenvolver um dashboard utilizando a plataforma Streamlit ou alguma outra plataforma(como power bi, por exemplo).

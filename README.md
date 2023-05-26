@@ -269,7 +269,38 @@ param_tuned = {'n_estimators': 100, 'max_depth': 3, 'min_samples_split': 2, 'min
 ![](./img/prediction.png)
  
 ## 9.0. Modelo em produção
-Exemplo de previsões de vendas feitas das lojas para as próximas 6 semanas:
+Alguns exemplos de previsões de vendas feitas das lojas para as próximas 6 semanas, mas para esse caso de valores novos não vistos pelo modelo ('test.csv'):
+Loja | Previsão para as próximas 6 semanas
+---- | -----------------------------------
+259	| R$ 328233.97
+530	| R$ 325116.76
+1097 | R$	294357.50
+262 | R$	293830.98
+578 | R$	293830.98
+550 | R$	283944.69
+269	| R$ 283944.69
+826 | R$	281579.91
+274	| R$ 276364.61
+842	| R$ 275360.36
+108	| R$ 275360.36
+113	| R$ 275360.36
+952	| R$ 275360.36
+430	| R$ 275360.36
+555	| 252705.14
+669	| 252705.14
+13	| 248360.81
+145	| 248360.81
+215	| 248360.81
+670	| 247564.41
+365	| 247564.41
+919	| 247564.41
+32	| 247564.41
+703	| 227962.65
+801	| 222115.89
+805	| 218899.97
+258	| 218599.25
+622	| 207283.80
+879	| 184323.35
 
 ## 10.0 Melhorias futuras
 **1.** Desenvolver um dashboard utilizando a plataforma Streamlit ou alguma outra plataforma(como power bi, por exemplo).
